@@ -8,24 +8,25 @@
     </head>
     <script src="scripts/aframe.min.js"></script>
     <script src="scripts/aframe-ar.js"></script>
-    
+
     <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth:1280; displayHeight:960; cameraParametersUrl:./scripts/camera_para.dat;">
-    
+
       <a-marker type="pattern" url="patt/pattern-valdonega.patt">
 	<a-entity obj-model="obj: url(models/villa_valdonega_intero3.obj);mtl: url(models/villa_valdonega_intero3.mtl)" scale='0.09 0.09 0.09'>
 	</a-entity>
       </a-marker>
-      
+
       <a-marker type="pattern" url="patt/pattern-colonna.patt">
 	<a-entity obj-model="obj: url(models/villa_valdonega_con_mosaico.obj);mtl: url(models/villa_valdonega_con_mosaico.mtl)" scale='0.09 0.09 0.09'>
 	</a-entity>
       </a-marker>
 
       <a-entity light="type: ambient; intensity: 1"></a-entity>
-      <a-entity light="type: point; intensity: 0.4" position="0 -3 3"></a-entity>       
-      
+      <a-entity light="type: point; intensity: 0.4" position="0 -3 3"></a-entity>
+
         <a-entity camera></a-entity>
      </a-scene>
+     <script type="text/javascript" src="js/event.js"></script>
     </body>
 </html>
