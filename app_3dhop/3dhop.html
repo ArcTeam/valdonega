@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--STYLESHEET-->
+<link type="text/css" rel="stylesheet" href="valdonega/3dhop.css">
+<link type="text/css" rel="stylesheet" href="valdonega/villa.css">
+<link type="text/css" rel="stylesheet" href="../css/fa-all.min.css">
+<link type="text/css" rel="stylesheet" href="../css/header.css">
+<script type="text/javascript" src="valdonega/spidergl.js"></script>
+<script type="text/javascript" src="valdonega/jquery.js"></script>
+<script type="text/javascript" src="valdonega/presenter.js"></script>
+<script type="text/javascript" src="valdonega/nexus.js"></script>
+<script type="text/javascript" src="valdonega/ply.js"></script>
+<script type="text/javascript" src="valdonega/trackball_sphere.js"></script>
+<script type="text/javascript" src="valdonega/trackball_turntable.js"></script>
+<script type="text/javascript" src="valdonega/trackball_pantilt.js"></script>
+<script type="text/javascript" src="valdonega/init.js"></script>
+<script type="text/javascript" src="valdonega/villa.js"></script>
+<script type="text/javascript" id="useragent-switcher">navigator.__defineGetter__("userAgent", function() {return "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:56.0) Gecko/20100101 Firefox/56.0"})</script>
+</head>
+<body onload="presenter.animateToTrackballPosition([-30.0, 25.0, 3.0])">
+<div id="3dhop" class="tdhop" onmousedown="if (event.preventDefault) event.preventDefault()" style="width: 1366px; height: 625px;">
+  <div class="header">
+    <div class="headerTitle">
+      <p>Valdonega virtual tour</p>
+    </div>
+    <div id="homeBtn" class="headerIco"><a href="../index.html"><i class="fas fa-home"></i></a></div>
+  </div>
+ <table id="cover" onclick="if($('#help_pane').css('display')=='table') helpSwitch(); else if ($('#info_pane_vertical').css('display')=='table') infoSwitch('vertical'); else if ($('#info_pane_horizontal').css('display')=='table') infoSwitch('horizontal'); else if ($('#info_pane_horizontal3').css('display')=='table') infoSwitch('horizontal3'); else if ($('#info_pane_horizontal4').css('display')=='table') infoSwitch('horizontal4'); else if ($('#info_pane_horizontal5').css('display')=='table') infoSwitch('horizontal5'); else if ($('#info_pane_horizontal6').css('display')=='table') infoSwitch('horizontal6'); else if ($('#info_pane_horizontal7').css('display')=='table') infoSwitch('horizontal7'); else if ($('#info_pane_horizontal8').css('display')=='table') infoSwitch('horizontal8'); else if ($('#info_pane_horizontal9').css('display')=='table') infoSwitch('horizontal9'); else if ($('#info_pane_horizontal10').css('display')=='table') infoSwitch('horizontal10'); else if ($('#info_pane_horizontal11').css('display')=='table') infoSwitch('horizontal11'); else if ($('#info_pane_horizontal12').css('display')=='table') infoSwitch('horizontal12'); else if ($('#info_pane_horizontal13').css('display')=='table') infoSwitch('horizontal13');">
+  <tbody><tr align="center"><td valign="center">
+   <table class="panel" id="help_pane" onclick="helpSwitch()" cellspacing="10">
+	<tbody>
+	   <tr><td colspan="3"><h3><img class="close" id="help_close_on" src="valdonega/close_on.png" onclick="helpSwitch();$('#help').css('opacity','0.5');" style="display:none;"><img class="close" id="help_close" src="valdonega/close.png">Credits</h3><hr></td></tr>
+	   <tr><td colspan="3"><center><img src="valdonega/credits.png"></center></td></tr>
+	</tbody>
+   </table>
+   <table class="panel" id="info_pane_vertical" onclick="infoSwitch('vertical')" cellspacing="10">
+	<tbody>
+	   <tr><td><img class="close" id="help_close_on" src="valdonega/close_on.png" onclick="helpSwitch();$('#help').css('opacity','0.5');" style="display:none;"><img class="close" id="help_close" src="valdonega/close.png"><hr></td></tr>
+	   <tr align="center"><td>
+			<h4 class="hs_sub"></h4>
+			<img id="hs1_img" src="valdonega/maschera.jpg" style="max-width:600px; max-height:400px;"><!--<figcaption style="font-size:60%;font-style:italic;text-align:left;margin-top:5px;margin-left:5px;">Denis Francisci</figcaption>-->
+		</td>
+	   </tr>
+	   <tr>
+		<td>
+			<p class="scroll" style="max-height:150px; font-style:normal; text-align:justify; margin-left:-10px; padding:15px;"><span class="hs_text"></span></p>
+		</td>
+	   </tr>
+	</tbody>
+   </table>
+   <table class="panel" id="info_pane_horizontal3" onclick="infoSwitch('horizontal3')" cellspacing="10">
+	<tbody>
+	   <tr><td><img class="close" id="help_close_on" src="valdonega/close_on.png" onclick="helpSwitch();$('#help').css('opacity','0.5');" style="display:none;"><img class="close" id="help_close" src="valdonega/close.png"><hr></td></tr>
+	   <tr align="center"><td>
+			<h4 class="hs_sub"></h4>
+			<img id="hs3_img" src="valdonega/giove.jpg" style="max-width:600px; max-height:400px;"><!--<figcaption style="font-size:60%;font-style:italic;text-align:left;margin-top:5px;margin-left:5px;">Denis Francisci</figcaption>-->
+		</td>
+	   </tr>
+	   <tr>
+		<td>
+			<p class="scroll" style="max-height:150px; font-style:normal; text-align:justify; margin-left:-10px; padding:15px;"><span class="hs_text"></span></p>
+		</td>
+	   </tr>
+	</tbody>
+   </table>
+   <table class="panel" id="info_pane_horizontal4" onclick="infoSwitch('horizontal4')" cellspacing="10">
+	<tbody>
+	   <tr><td><img class="close" id="help_close_on" src="valdonega/close_on.png" onclick="helpSwitch();$('#help').css('opacity','0.5');" style="display:none;"><img class="close" id="help_close" src="valdonega/close.png"><hr></td></tr>
+	   <tr align="center"><td>
+			<h4 class="hs_sub"></h4>
+			<img id="hs4_img" src="valdonega/merlo.jpg" style="max-width:600px; max-height:400px;"><!--<figcaption style="font-size:60%;font-style:italic;text-align:left;margin-top:5px;margin-left:5px;">Denis Francisci</figcaption>-->
+		</td>
+	   </tr>
+	   <tr>
+		<td>
+			<p class="scroll" style="max-height:150px; font-style:normal; text-align:justify; margin-left:-10px; padding:15px;"><span class="hs_text"></span></p>
+		</td>
+	   </tr>
+	</tbody>
+   </table>
+   <table class="panel" id="info_pane_horizontal5" onclick="infoSwitch('horizontal5')" cellspacing="10">
+	<tbody>
+	   <tr><td><img class="close" id="help_close_on" src="valdonega/close_on.png" onclick="helpSwitch();$('#help').css('opacity','0.5');" style="display:none;"><img class="close" id="help_close" src="valdonega/close.png"><hr></td></tr>
+	   <tr align="center"><td>
+			<h4 class="hs_sub"></h4>
+			<img id="hs5_img" src="valdonega/struzzo.jpg" style="max-width:600px; max-height:400px;"><!--<figcaption style="font-size:60%;font-style:italic;text-align:left;margin-top:5px;margin-left:5px;">Denis Francisci</figcaption>-->
+		</td>
+	   </tr>
+	   <tr>
+		<td>
+			<p class="scroll" style="max-height:150px; font-style:normal; text-align:justify; margin-left:-10px; padding:15px;"><span class="hs_text"></span></p>
+		</td>
+	   </tr>
+	</tbody>
+   </table>
+   <table class="panel" id="info_pane_horizontal6" onclick="infoSwitch('horizontal6')" cellspacing="10">
+	<tbody>
+	   <tr><td><img class="close" id="help_close_on" src="valdonega/close_on.png" onclick="helpSwitch();$('#help').css('opacity','0.5');" style="display:none;"><img class="close" id="help_close" src="valdonega/close.png"><hr></td></tr>
+	   <tr align="center"><td>
+			<h4 class="hs_sub"></h4>
+			<img id="hs6_img" src="valdonega/passero.jpg" style="max-width:600px; max-height:400px;"><!--<figcaption style="font-size:60%;font-style:italic;text-align:left;margin-top:5px;margin-left:5px;">Denis Francisci</figcaption>-->
+		</td>
+	   </tr>
+	   <tr>
+		<td>
+			<p class="scroll" style="max-height:150px; font-style:normal; text-align:justify; margin-left:-10px; padding:15px;"><span class="hs_text"></span></p>
+		</td>
+	   </tr>
+	</tbody>
+   </table>
+   <table class="panel" id="info_pane_horizontal7" onclick="infoSwitch('horizontal7')" cellspacing="10">
+	<tbody>
+	   <tr><td><img class="close" id="help_close_on" src="valdonega/close_on.png" onclick="helpSwitch();$('#help').css('opacity','0.5');" style="display:none;"><img class="close" id="help_close" src="valdonega/close.png"><hr></td></tr>
+	   <tr align="center"><td>
+			<h4 class="hs_sub"></h4>
+			<img id="hs7_img" src="valdonega/anatra.jpg" style="max-width:600px; max-height:400px;"><!--<figcaption style="font-size:60%;font-style:italic;text-align:left;margin-top:5px;margin-left:5px;">Denis Francisci</figcaption>-->
+		</td>
+	   </tr>
+	   <tr>
+		<td>
+			<p class="scroll" style="max-height:150px; font-style:normal; text-align:justify; margin-left:-10px; padding:15px;"><span class="hs_text"></span></p>
+		</td>
+	   </tr>
+	</tbody>
+   </table>
+   <table class="panel" id="info_pane_horizontal8" onclick="infoSwitch('horizontal8')" cellspacing="10">
+	<tbody>
+	   <tr><td><img class="close" id="help_close_on" src="valdonega/close_on.png" onclick="helpSwitch();$('#help').css('opacity','0.5');" style="display:none;"><img class="close" id="help_close" src="valdonega/close.png"><hr></td></tr>
+	   <tr align="center"><td>
+			<h4 class="hs_sub"></h4>
+			<img id="hs8_img" src="valdonega/cardellino.jpg" style="max-width:600px; max-height:400px;"><!--<figcaption style="font-size:60%;font-style:italic;text-align:left;margin-top:5px;margin-left:5px;">Denis Francisci</figcaption>-->
+		</td>
+	   </tr>
+	   <tr>
+		<td>
+			<p class="scroll" style="max-height:150px; font-style:normal; text-align:justify; margin-left:-10px; padding:15px;"><span class="hs_text"></span></p>
+		</td>
+	   </tr>
+	</tbody>
+   </table>
+   <table class="panel" id="info_pane_horizontal9" onclick="infoSwitch('horizontal9')" cellspacing="10">
+	<tbody>
+	   <tr><td><img class="close" id="help_close_on" src="valdonega/close_on.png" onclick="helpSwitch();$('#help').css('opacity','0.5');" style="display:none;"><img class="close" id="help_close" src="valdonega/close.png"><hr></td></tr>
+	   <tr align="center"><td>
+			<h4 class="hs_sub"></h4>
+			<img id="hs9_img" src="valdonega/fringuello.jpg" style="max-width:600px; max-height:400px;"><!--<figcaption style="font-size:60%;font-style:italic;text-align:left;margin-top:5px;margin-left:5px;">Denis Francisci</figcaption>-->
+		</td>
+	   </tr>
+	   <tr>
+		<td>
+			<p class="scroll" style="max-height:150px; font-style:normal; text-align:justify; margin-left:-10px; padding:15px;"><span class="hs_text"></span></p>
+		</td>
+	   </tr>
+	</tbody>
+   </table>
+   <table class="panel" id="info_pane_horizontal10" onclick="infoSwitch('horizontal10')" cellspacing="10">
+	<tbody>
+	   <tr><td><img class="close" id="help_close_on" src="valdonega/close_on.png" onclick="helpSwitch();$('#help').css('opacity','0.5');" style="display:none;"><img class="close" id="help_close" src="valdonega/close.png"><hr></td></tr>
+	   <tr align="center"><td>
+			<h4 class="hs_sub"></h4>
+			<img id="hs10_img" src="valdonega/atena.jpg" style="max-width:600px; max-height:400px;"><!--<figcaption style="font-size:60%;font-style:italic;text-align:left;margin-top:5px;margin-left:5px;">Denis Francisci</figcaption>-->
+		</td>
+	   </tr>
+	   <tr>
+		<td>
+			<p class="scroll" style="max-height:150px; font-style:normal; text-align:justify; margin-left:-10px; padding:15px;"><span class="hs_text"></span></p>
+		</td>
+	   </tr>
+	</tbody>
+   </table>
+   <table class="panel" id="info_pane_horizontal11" onclick="infoSwitch('horizontal11')" cellspacing="10">
+	<tbody>
+	   <tr><td><img class="close" id="help_close_on" src="valdonega/close_on.png" onclick="helpSwitch();$('#help').css('opacity','0.5');" style="display:none;"><img class="close" id="help_close" src="valdonega/close.png"><hr></td></tr>
+	   <tr align="center"><td>
+			<h4 class="hs_sub"></h4>
+			<img id="hs11_img" src="valdonega/civetta.jpg" style="max-width:600px; max-height:400px;"><!--<figcaption style="font-size:60%;font-style:italic;text-align:left;margin-top:5px;margin-left:5px;">Denis Francisci</figcaption>-->
+		</td>
+	   </tr>
+	   <tr>
+		<td>
+			<p class="scroll" style="max-height:150px; font-style:normal; text-align:justify; margin-left:-10px; padding:15px;"><span class="hs_text"></span></p>
+		</td>
+	   </tr>
+	</tbody>
+   </table>
+   <table class="panel" id="info_pane_horizontal12" onclick="infoSwitch('horizontal12')" cellspacing="10">
+	<tbody>
+	   <tr><td><img class="close" id="help_close_on" src="valdonega/close_on.png" onclick="helpSwitch();$('#help').css('opacity','0.5');" style="display:none;"><img class="close" id="help_close" src="valdonega/close.png"><hr></td></tr>
+	   <tr align="center"><td>
+			<h4 class="hs_sub"></h4>
+			<img id="hs12_img" src="valdonega/grifoni.jpg" style="max-width:600px; max-height:400px;"><!--<figcaption style="font-size:60%;font-style:italic;text-align:left;margin-top:5px;margin-left:5px;">Denis Francisci</figcaption>-->
+		</td>
+	   </tr>
+	   <tr>
+		<td>
+			<p class="scroll" style="max-height:150px; font-style:normal; text-align:justify; margin-left:-10px; padding:15px;"><span class="hs_text"></span></p>
+		</td>
+	   </tr>
+	</tbody>
+   </table>
+   <table class="panel" id="info_pane_horizontal13" onclick="infoSwitch('horizontal13')" cellspacing="10">
+	<tbody>
+	   <tr><td><img class="close" id="help_close_on" src="valdonega/close_on.png" onclick="helpSwitch();$('#help').css('opacity','0.5');" style="display:none;"><img class="close" id="help_close" src="valdonega/close.png"><hr></td></tr>
+	   <tr align="center"><td>
+			<h4 class="hs_sub"></h4>
+			<img id="hs13_img" src="valdonega/ippocampi.jpg" style="max-width:600px; max-height:400px;"><!--<figcaption style="font-size:60%;font-style:italic;text-align:left;margin-top:5px;margin-left:5px;">Denis Francisci</figcaption>-->
+		</td>
+	   </tr>
+	   <tr>
+		<td>
+			<p class="scroll" style="max-height:150px; font-style:normal; text-align:justify; margin-left:-10px; padding:15px;"><span class="hs_text"></span></p>
+		</td>
+	   </tr>
+	</tbody>
+   </table>
+   <table class="panel" id="info_pane_horizontal" onclick="infoSwitch('horizontal')" cellspacing="10">
+	<tbody>
+	   <tr><td><img class="close" id="help_close_on" src="valdonega/close_on.png" onclick="helpSwitch();$('#help').css('opacity','0.5');" style="display:none;"><img class="close" id="help_close" src="valdonega/close.png"><hr></td></tr>
+	   <tr align="center"><td>
+			<h4 class="hs_sub"></h4>
+			<img id="hs2_img" src="valdonega/galletto.jpg" style="max-width:600px; max-height:400px;"><!--<figcaption style="font-size:60%;font-style:italic;text-align:left;margin-top:5px;margin-left:5px;">Denis Francisci</figcaption>-->
+		</td>
+	   </tr>
+	   <tr>
+		<td>
+			<p class="scroll" style="max-height:150px; font-style:normal; text-align:justify; margin-left:-10px; padding:15px;"><span class="hs_text"></span></p>
+		</td>
+	   </tr>
+	</tbody>
+   </table>
+  </td></tr>
+ </tbody></table>
+ <div id="toolbar">
+  <img id="home" title="Home" src="valdonega/home.png" style="opacity: 0.5;">
+  <img id="home1" title="Front" src="valdonega/home1.png" style="opacity: 0.5;">
+  <img id="home2" title="Left" src="valdonega/home2.png" style="opacity: 0.5;">
+  <img id="home3" title="Right" src="valdonega/home3.png" style="opacity: 0.5;">
+  <img id="lighting"     title="Disable Lighting"      src="valdonega/lighting.png"    style="position:absolute; visibility:hidden;"/>
+  <img id="lighting_off" title="Enable Lighting"       src="valdonega/lighting_off.png"        />
+  <img id="light_on" title="Disable Light Control" src="valdonega/lightcontrol_on.png" style="position: absolute; visibility: hidden; opacity: 0.5;">
+  <img id="light" title="Enable Light Control" src="valdonega/lightcontrol.png" style="opacity: 0.5;">
+  <img id="hotspot" title="Show Hotspots" src="valdonega/pin.png" style="position: absolute; visibility: hidden; opacity: 0.5;">
+  <img id="hotspot_on" title="Hide Hotspots" src="valdonega/pin_on.png" style="opacity: 0.5;">
+  <!-- <img id="full_on" title="Exit Full Screen" src="valdonega/full_on.png" style="position: absolute; visibility: hidden; opacity: 0.5;">
+  <img id="full" title="Full Screen" src="valdonega/full.png" style="opacity: 0.5;"> -->
+  <img id="help_on" title="Hide Help" src="valdonega/help_on.png" style="position: absolute; visibility: hidden; opacity: 0.5;">
+  <img id="help" title="Show Help" src="valdonega/help.png" style="opacity: 0.5;">
+ </div>
+ <canvas id="draw-canvas" width="1366" height="625">
+</canvas></div>
+
+
+<script type="text/javascript">
+var presenter = null;
+
+function setup3dhop() {
+	presenter = new Presenter("draw-canvas");
+
+	presenter.setScene({
+		meshes: {
+			"villa" : { url: "models/singleres/villa_m10_rot_scale5.ply" },
+			"galletto" : { url: "models/singleres/cube2.ply" },
+			"giove" : { url: "models/singleres/cube3.ply" },
+			"maschera" : { url: "models/singleres/cube1.ply" },
+			"struzzo" : { url: "models/singleres/cube5.ply" },
+			"passero" : { url: "models/singleres/cube6.ply" },
+			"anatra" : { url: "models/singleres/cube7.ply" },
+			"cardellino" : { url: "models/singleres/cube8.ply" },
+			"fringuello" : { url: "models/singleres/cube9.ply" },
+			"atena" : { url: "models/singleres/cube10.ply" },
+			"civetta" : { url: "models/singleres/cube11.ply" },
+			"grifoni" : { url: "models/singleres/cube12.ply" },
+			"ippocampi" : { url: "models/singleres/cube13.ply" },
+			"merlo" : { url: "models/singleres/cube4.ply" }
+		},
+		modelInstances : {
+			"villa" : { mesh : "villa" }
+		},
+		spots : {
+			"spot1" : {
+				mesh : "maschera",
+				color : [0.0, 0.25, 1.0],
+				alpha : 0.5
+			},
+			"spot2" : {
+				mesh : "galletto",
+				color : [0.0, 0.25, 1.0],
+				alpha : 0.5
+			},
+			"spot3" : {
+				mesh : "giove",
+				color : [0.0, 0.25, 1.0],
+				alpha : 0.5
+			},
+			"spot4" : {
+				mesh : "merlo",
+				color : [0.0, 0.25, 1.0],
+				alpha : 0.5
+			},
+			"spot5" : {
+				mesh : "struzzo",
+				color : [0.0, 0.25, 1.0],
+				alpha : 0.5
+			},
+			"spot6" : {
+				mesh : "passero",
+				color : [0.0, 0.25, 1.0],
+				alpha : 0.5
+			},
+			"spot7" : {
+				mesh : "anatra",
+				color : [0.0, 0.25, 1.0],
+				alpha : 0.5
+			},
+			"spot8" : {
+				mesh : "cardellino",
+				color : [0.0, 0.25, 1.0],
+				alpha : 0.5
+			},
+			"spot9" : {
+				mesh : "fringuello",
+				color : [0.0, 0.25, 1.0],
+				alpha : 0.5
+			},
+			"spot10" : {
+				mesh : "atena",
+				color : [0.0, 0.25, 1.0],
+				alpha : 0.5
+			},
+			"spot11" : {
+				mesh : "civetta",
+				color : [0.0, 0.25, 1.0],
+				alpha : 0.5
+			},
+			"spot12" : {
+				mesh : "grifoni",
+				color : [0.0, 0.25, 1.0],
+				alpha : 0.5
+			},
+			"spot13" : {
+				mesh : "ippocampi",
+				color : [0.0, 0.25, 1.0],
+				alpha : 0.5
+			}
+		},
+		trackball: {
+			type : TurnTableTrackball,
+			trackOptions: {
+				startPhi: (-110-(Math.random()*200)),
+				startDistance : 2.0,
+				minMaxDist    : [0.0, 3.0],
+				minMaxTheta   : [-10.0, 70.0]
+			}
+		},
+		space: {
+			centerMode: "explicit",
+			explicitCenter: [0.0, -60.0,0.0],
+			cameraFOV     : 35.0
+		}
+	});
+
+	presenter.setSpotVisibility(HOP_ALL, true, true);
+//arc-team: cambiare il primo true in false se si vuole spegnere all'inizio gli hotspot
+	presenter._onPickedSpot = onPickedSpt;
+}
+
+function actionsToolbar(action) {
+	if(action=='home') { presenter.animateToTrackballPosition([-30.0, 25.0, 3.0]); presenter.rotateLight(0.0, 0.0); }
+	if(action=='home1') { presenter.animateToTrackballPosition([0.0, 15.0, 0.3]); presenter.rotateLight(0.0, 0.0); }
+	if(action=='home2') { presenter.animateToTrackballPosition([-270.0, 25.0, 0.7]); presenter.rotateLight(0.0, 0.0); }
+	if(action=='home3') { presenter.animateToTrackballPosition([-90.0, 25.0, 0.7]); presenter.rotateLight(0.0, 0.0); }
+	else if(action=='zoomin') presenter.zoomIn();
+	else if(action=='zoomout') presenter.zoomOut();
+	else if(action=='lighting' || action=='lighting_off') { presenter.enableSceneLighting(!presenter.isSceneLightingEnabled()); lightingSwitch(); }
+	else if(action=='light' || action=='light_on') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); lightSwitch(); }
+	else if(action=='hotspot'|| action=='hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch();}
+	else if(action=='full'  || action=='full_on') fullscreenSwitch();
+	else if(action=='help'|| action=='help_on') helpSwitch();
+}
+
+function onPickedSpt(id) {
+  switch(id) {
+   case 'spot1' : infoSwitch('vertical'); setInfo(id); break;
+   case 'spot2' : infoSwitch('horizontal'); setInfo(id); break;
+   case 'spot3' : infoSwitch('horizontal3'); setInfo(id); break;
+   case 'spot4' : infoSwitch('horizontal4'); setInfo(id); break;
+   case 'spot5' : infoSwitch('horizontal5'); setInfo(id); break;
+   case 'spot6' : infoSwitch('horizontal6'); setInfo(id); break;
+   case 'spot7' : infoSwitch('horizontal7'); setInfo(id); break;
+   case 'spot8' : infoSwitch('horizontal8'); setInfo(id); break;
+   case 'spot9' : infoSwitch('horizontal9'); setInfo(id); break;
+   case 'spot10' : infoSwitch('horizontal10'); setInfo(id); break;
+   case 'spot11' : infoSwitch('horizontal11'); setInfo(id); break;
+   case 'spot12' : infoSwitch('horizontal12'); setInfo(id); break;
+   case 'spot13' : infoSwitch('horizontal13'); setInfo(id); break;
+
+  }
+}
+
+$(document).ready(function(){
+	init3dhop();
+
+	setup3dhop();
+
+	initPanels();
+
+	moveToolbar(null,(($('#3dhop').parent().height()-415)/2));
+
+	$("#toolbar")
+		.animate({
+			marginLeft: "-10"
+		}, 1000 );
+
+	$(window).on('resize', function () {
+		moveToolbar(null,(($('#3dhop').parent().height()-415)/2));
+		presenter.ui.postDrawEvent();
+	});
+});
+
+document.addEventListener("MSFullscreenChange", function () {
+	if(!document.msFullscreenElement) { moveToolbar(null,($('#toolbar').parent().height()-$('#toolbar').innerHeight())/2); }
+	else { moveToolbar(null,(screen.height-$('#toolbar').innerHeight())/2); }
+}, false);
+document.addEventListener("mozfullscreenchange", function () {
+	if(!document.mozFullScreen) { moveToolbar(null,($('#toolbar').parent().height()-$('#toolbar').innerHeight())/2); }
+	else { moveToolbar(null,(screen.height-$('#toolbar').innerHeight())/2); }
+}, false);
+document.addEventListener("webkitfullscreenchange", function () {
+	if(!document.webkitIsFullScreen) { moveToolbar(null,($('#toolbar').parent().height()-$('#toolbar').innerHeight())/2); }
+	else { moveToolbar(null,(screen.height-$('#toolbar').innerHeight())/2); }
+}, false);
+</script>
+
+<!-- Google Analytics Script -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46307450-2', 'cnr.it');
+  ga('send', 'pageview');
+</script>
+
+
+</body></html>

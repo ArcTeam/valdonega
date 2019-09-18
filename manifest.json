@@ -1,0 +1,22 @@
+{
+  "short_name": "Valdonega",
+  "name": "Valdonega virtual tour app",
+  "icons": [
+    {
+      "src": "assets/icons/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/icons/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./",
+  "background_color": "#a90000",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "scope": "./",
+  "theme_color": "#a90000"
+}
