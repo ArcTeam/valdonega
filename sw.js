@@ -1,5 +1,4 @@
-const version = "190918.v1";
-const cacheName = 'valdonega-${version}';
+const cacheName = 'valdonega.190918.v1';
 const cacheFile = [
 'webfonts',
 'webfonts/fa-solid-900.ttf',
