@@ -1,15 +1,13 @@
 html,body{position:relative;margin:0; padding: 0;width: 100%;height: 100%; font-family: 'Arial', sans-serif;}
 #main{position:fixed;top:60px;left:0;bottom:15px;}
 div.hotspot{position:fixed;}
-div.hotspot{top:6vh;left:0;width:100vw;height:94vh;} */
-/* div.bg{z-index: 1;text-align: center;} */
-/* div.bg>img{position:relative;max-width:80%;height:auto;} */
+div.hotspot{top:6vh;left:0;width:100vw;height:94vh;}
 div.hotspot{z-index: 2;}
 #fsTrigger{z-index:5;}
 svg { width:100vw;height:94vh;}
 circle {fill: #a90000; stroke-width:2px; stroke:#710101; stroke-opacity:1;}
 .pulse {fill: white; fill-opacity: 0; animation-duration: 2s; animation-name: pulse; animation-iteration-count: infinite;}
-
+#imgBg{width:80%;}
 div.description{
   position:absolute;
   width: 250px;
@@ -48,9 +46,9 @@ div.description{
 #fullScreenWrap{position:absolute;bottom:5px;left:0;width:100%;padding:0 20px;}
 #fullScreenWrap>button{float:right;display:block;}
 
-/* @media only screen and (orientation:landscape){
-  body {height: 100vw; transform: rotate(90deg);}
-} */
+@media only screen and (orientation:landscape){
+  /* body {height: 100vw; transform: rotate(90deg);} */
+}
 
 @keyframes pulse {
   from {stroke-width: 3px; stroke-opacity: 1; transform: scale(0);}
