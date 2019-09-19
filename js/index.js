@@ -12,6 +12,7 @@ var circleTop = document.getElementById('circleTop');
 var circleMiddle = document.getElementById('circleMiddle');
 var circleBottom = document.getElementById('circleBottom');
 
+
 fsExitTrigger.style.display='none'
 window.addEventListener('load', function(){
   setBgImg(screen.orientation.angle)
@@ -41,39 +42,39 @@ function setBgImg(angle){
   if(angle==0 || angle==180){
     bg.src='./assets/img/pianta_villa.jpg';
     circleTop.setAttribute("cx","340")
-    circleTop.setAttribute("cy","175")
+    circleTop.setAttribute("cy","120")
     pulseTop.setAttribute("cx","340")
-    pulseTop.setAttribute("cy","175")
-    pulseTop.style.transformOrigin="340px 175px"
+    pulseTop.setAttribute("cy","120")
+    pulseTop.style.transformOrigin="340px 120px"
     circleMiddle.setAttribute("cx","345")
-    circleMiddle.setAttribute("cy","520")
+    circleMiddle.setAttribute("cy","480")
     pulseMiddle.setAttribute("cx","345")
-    pulseMiddle.setAttribute("cy","520")
-    pulseMiddle.style.transformOrigin="345px 520px"
+    pulseMiddle.setAttribute("cy","480")
+    pulseMiddle.style.transformOrigin="345px 480px"
     circleBottom.setAttribute("cx","250")
-    circleBottom.setAttribute("cy","580")
+    circleBottom.setAttribute("cy","540")
     pulseBottom.setAttribute("cx","250")
-    pulseBottom.setAttribute("cy","580")
-    pulseBottom.style.transformOrigin="250px 580px"
+    pulseBottom.setAttribute("cy","540")
+    pulseBottom.style.transformOrigin="250px 540px"
   }else {
     bg.src='./assets/img/pianta_villa_hor.jpg';
-    circleTop.setAttribute("cx","635")
-    circleTop.setAttribute("cy","375")
-    pulseTop.setAttribute("cx","635")
-    pulseTop.setAttribute("cy","375")
-    pulseTop.style.transformOrigin="635px 375px"
+    circleTop.setAttribute("cx","770")
+    circleTop.setAttribute("cy","360")
+    pulseTop.setAttribute("cx","770")
+    pulseTop.setAttribute("cy","360")
+    pulseTop.style.transformOrigin="770px 360px"
 
-    circleMiddle.setAttribute("cx","275")
-    circleMiddle.setAttribute("cy","380")
-    pulseMiddle.setAttribute("cx","275")
-    pulseMiddle.setAttribute("cy","380")
-    pulseMiddle.style.transformOrigin="275px 380px"
+    circleMiddle.setAttribute("cx","320")
+    circleMiddle.setAttribute("cy","370")
+    pulseMiddle.setAttribute("cx","320")
+    pulseMiddle.setAttribute("cy","370")
+    pulseMiddle.style.transformOrigin="320px 370px"
 
-    circleBottom.setAttribute("cx","220")
-    circleBottom.setAttribute("cy","265")
-    pulseBottom.setAttribute("cx","220")
-    pulseBottom.setAttribute("cy","265")
-    pulseBottom.style.transformOrigin="220px 265px"
+    circleBottom.setAttribute("cx","250")
+    circleBottom.setAttribute("cy","250")
+    pulseBottom.setAttribute("cx","250")
+    pulseBottom.setAttribute("cy","250")
+    pulseBottom.style.transformOrigin="250px 250px"
   }
 }
 

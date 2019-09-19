@@ -1,4 +1,4 @@
-const cacheName = 'valdonega.190918.v2';
+const cacheName = 'valdonega.190919.v3.1';
 const cacheFile = [
   './',
   './webfonts/fa-solid-900.ttf',
@@ -25,10 +25,6 @@ const cacheFile = [
   './assets/icons/home.svg',
   './assets/icons/icons-512.png',
   './assets/icons/home.png',
-  './pianta/pianta_ar.jpg',
-  './pianta/pianta.svg',
-  './pianta/index2.jpeg',
-  './pianta/index.jpeg',
   './index.html',
   './app_3dhop/models/singleres/cube3.ply',
   './app_3dhop/models/singleres/villa_m10_rot_scale5.ply',
@@ -71,7 +67,6 @@ const cacheFile = [
   './app_3dhop/valdonega/grifoni.jpg',
   './app_3dhop/valdonega/zoomin.png',
   './app_3dhop/valdonega/lighting_off.png',
-  './app_3dhop/valdonega/3dhop.css',
   './app_3dhop/valdonega/ippocampi.jpg',
   './app_3dhop/valdonega/trackball_turntable.js',
   './app_3dhop/valdonega/home2.png',
@@ -81,7 +76,6 @@ const cacheFile = [
   './app_3dhop/valdonega/lightcontrol_on.png',
   './app_3dhop/valdonega/full_on.png',
   './app_3dhop/valdonega/anatra.jpg',
-  './app_3dhop/valdonega/close_on.png',
   './app_3dhop/valdonega/home1.png',
   './app_3dhop/valdonega/merlo.jpg',
   './app_3dhop/valdonega/villa.css',

@@ -1,13 +1,13 @@
 html,body{position:relative;margin:0; padding: 0;width: 100%;height: 100%; font-family: 'Arial', sans-serif;}
-#main{position:fixed;top:60px;left:0;bottom:15px;}
-div.hotspot{position:fixed;}
-div.hotspot{top:6vh;left:0;width:100vw;height:94vh;}
+div.banner{position:fixed;top:50px;left:0;right:0;}
+div.backgroundImage, div.hotspot{position:fixed;top:130px;left:0;width:100vw;bottom:0;}
+div.backgroundImage{z-index: 1;}
 div.hotspot{z-index: 2;}
 #fsTrigger{z-index:5;}
-svg { width:100vw;height:94vh;}
+svg { width:100vw;height:100%;}
 circle {fill: #a90000; stroke-width:2px; stroke:#710101; stroke-opacity:1;}
 .pulse {fill: white; fill-opacity: 0; animation-duration: 2s; animation-name: pulse; animation-iteration-count: infinite;}
-#imgBg{width:80%;}
+#imgBg{width:80%;max-width:100%;height:auto;}
 div.description{
   position:absolute;
   width: 250px;
