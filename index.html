@@ -19,7 +19,7 @@
       <div class="headerTitle">
         <p>Valdonega virtual tour</p>
       </div>
-      <div id="creditsBtn" class="headerIco"><i class="fas fa-info-circle"></i></div>
+      <div id="creditsBtn" class="headerIco headerBtn"><i class="fas fa-info-circle"></i></div>
     </div>
     <div class="banner">
       <h2 class="text-center">Benvenuto nel Valdonega Virtual Tour</h2>
@@ -30,12 +30,12 @@
     </div>
     <div class="hotspot">
       <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-        <circle class="pulse top" id="pulseTop" r="10" />
-        <circle class="btnSvg" id="circleTop" data-div="3dhopDescription" r="7" />
-        <circle class="pulse middle" id="pulseMiddle" r="10" />
-        <circle class="btnSvg" id="circleMiddle" data-div="panoDescription" r="7" />
-        <circle class="pulse bottom" id="pulseBottom" cx="100" cy="580" r="10" />
-        <circle class="btnSvg" id="circleBottom" data-div="arDescription" r="7" />
+        <circle class="pulse top" id="pulseTop" r="15" />
+        <circle class="btnSvg" id="circleTop" data-div="3dhopDescription" r="12" />
+        <circle class="pulse middle" id="pulseMiddle" r="15" />
+        <circle class="btnSvg" id="circleMiddle" data-div="panoDescription" r="12" />
+        <circle class="pulse bottom" id="pulseBottom" cx="100" cy="580" r="15" />
+        <circle class="btnSvg" id="circleBottom" data-div="arDescription" r="12" />
       </svg>
     </div>
     <div id="arDescription" class="description">
@@ -80,15 +80,10 @@
         </div>
       </div>
     </div>
-    <div id="fullScreenWrap">
-      <button type="button" id="fsTrigger" class="btn btn-light btn-sm" name="button">
-        <i class="fas fa-expand-arrows-alt"></i>
-      </button>
-      <button type="button" id="fsExitTrigger" class="btn btn-light btn-sm" name="button">
-        <i class="fas fa-compress-arrows-alt"></i>
-      </button>
+    <div id="updateAvailable" class="bg-dark rounded">
+      <p class="text-light">l'app è stata aggiornata<br>clicca sul pulsante in basso per scaricare gli ultimi aggiornamenti</p>
+      <a id="update" class="btn btn-secondary btn-sm text-white">aggiorna app</a>
     </div>
-
     <script type="text/javascript" src="js/event.js"></script>
     <script src="js/index.js" charset="utf-8"></script>
   </body>

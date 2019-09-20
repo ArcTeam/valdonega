@@ -1,4 +1,4 @@
-const cacheName = 'valdonega.190919.v3.1';
+const cacheName = 'valdonega.190919.v3.3';
 const cacheFile = [
   './',
   './webfonts/fa-solid-900.ttf',
@@ -153,6 +153,12 @@ self.addEventListener('activate', event => {
       );
     })
   );
+});
+
+self.addEventListener('message', function (event) {
+  if (event.data.action === 'skipWaiting') {
+    self.skipWaiting();
+  }
 });
 
 self.addEventListener('fetch', event => {

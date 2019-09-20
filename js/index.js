@@ -1,19 +1,15 @@
 var btnSvg = document.querySelectorAll('.btnSvg');
 var closeDescBtn = document.querySelectorAll('.closeDesc');
 var homeBtn = document.getElementById('homeBtn');
-var bgImg = document.getElementById('backgroundImage');
 var bg = document.getElementById('imgBg');
-var viewFullScreen = document.getElementById("fsTrigger");
-var exitFullScreen = document.getElementById("fsExitTrigger");
 var pulseTop = document.getElementById('pulseTop');
 var pulseMiddle = document.getElementById('pulseMiddle');
 var pulseBottom = document.getElementById('pulseBottom');
 var circleTop = document.getElementById('circleTop');
 var circleMiddle = document.getElementById('circleMiddle');
 var circleBottom = document.getElementById('circleBottom');
+var creditsWrap = document.getElementById('creditsWrap');
 
-
-fsExitTrigger.style.display='none'
 window.addEventListener('load', function(){
   setBgImg(screen.orientation.angle)
   for (var i = 0; i < btnSvg.length; i++) { setDivPos(btnSvg[i]); }
@@ -31,61 +27,52 @@ for (var i = 0; i < btnSvg.length; i++) {
   });
 }
 
-document.getElementsByName("closeCredit")[0].addEventListener('click',function(){
-  document.getElementById('creditsWrap').style.display='none'
-})
-document.getElementById('creditsBtn').addEventListener('click', function(){
-  document.getElementById('creditsWrap').style.display='flex'
-})
+document.getElementsByName("closeCredit")[0].addEventListener('click',function(){ creditsWrap.style.display='none'; })
+document.getElementById('creditsBtn').addEventListener('click', function(){ creditsWrap.style.display='flex'; })
 
 function setBgImg(angle){
   if(angle==0 || angle==180){
     bg.src='./assets/img/pianta_villa.jpg';
+
     circleTop.setAttribute("cx","340")
     circleTop.setAttribute("cy","120")
     pulseTop.setAttribute("cx","340")
     pulseTop.setAttribute("cy","120")
     pulseTop.style.transformOrigin="340px 120px"
-    circleMiddle.setAttribute("cx","345")
-    circleMiddle.setAttribute("cy","480")
-    pulseMiddle.setAttribute("cx","345")
-    pulseMiddle.setAttribute("cy","480")
-    pulseMiddle.style.transformOrigin="345px 480px"
-    circleBottom.setAttribute("cx","250")
-    circleBottom.setAttribute("cy","540")
-    pulseBottom.setAttribute("cx","250")
-    pulseBottom.setAttribute("cy","540")
-    pulseBottom.style.transformOrigin="250px 540px"
+
+    circleMiddle.setAttribute("cx","250")
+    circleMiddle.setAttribute("cy","530")
+    pulseMiddle.setAttribute("cx", "250")
+    pulseMiddle.setAttribute("cy", "530")
+    pulseMiddle.style.transformOrigin="250px 530px"
+
+    circleBottom.setAttribute("cx","315")
+    circleBottom.setAttribute("cy","600")
+    pulseBottom.setAttribute("cx", "315")
+    pulseBottom.setAttribute("cy", "600")
+    pulseBottom.style.transformOrigin="315px 600px"
   }else {
     bg.src='./assets/img/pianta_villa_hor.jpg';
+
     circleTop.setAttribute("cx","770")
     circleTop.setAttribute("cy","360")
     pulseTop.setAttribute("cx","770")
     pulseTop.setAttribute("cy","360")
     pulseTop.style.transformOrigin="770px 360px"
 
-    circleMiddle.setAttribute("cx","320")
-    circleMiddle.setAttribute("cy","370")
-    pulseMiddle.setAttribute("cx","320")
-    pulseMiddle.setAttribute("cy","370")
-    pulseMiddle.style.transformOrigin="320px 370px"
+    circleMiddle.setAttribute("cx","265")
+    circleMiddle.setAttribute("cy","250")
+    pulseMiddle.setAttribute("cx","265")
+    pulseMiddle.setAttribute("cy","250")
+    pulseMiddle.style.transformOrigin="265px 250px"
 
-    circleBottom.setAttribute("cx","250")
-    circleBottom.setAttribute("cy","250")
-    pulseBottom.setAttribute("cx","250")
-    pulseBottom.setAttribute("cy","250")
-    pulseBottom.style.transformOrigin="250px 250px"
+    circleBottom.setAttribute("cx","180")
+    circleBottom.setAttribute("cy","330")
+    pulseBottom.setAttribute("cx","180")
+    pulseBottom.setAttribute("cy","330")
+    pulseBottom.style.transformOrigin="180px 330px"
   }
 }
-
-viewFullScreen.addEventListener("click", function() {
-  lock('landscape')
-})
-exitFullScreen.addEventListener("click", function() {
-  smolScreen()
-})
-
-
 
 for (var i = 0; i < closeDescBtn.length; i++) {
   closeDescBtn[i].addEventListener('click', function() {
@@ -122,38 +109,4 @@ function getOffset(el) {
     left: rect.left + window.scrollX,
     top: rect.top + window.scrollY
   };
-}
-
-function fullScreen() {
-  // Kind of painful, but this is how it works for now
-  if (document.documentElement.requestFullscreen) {
-    document.documentElement.requestFullscreen();
-  } else if (document.documentElement.mozRequestFullScreen) {
-    document.documentElement.mozRequestFullScreen();
-  } else if (document.documentElement.webkitRequestFullscreen) {
-    document.documentElement.webkitRequestFullscreen();
-  } else if (document.documentElement.msRequestFullscreen) {
-    document.documentElement.msRequestFullscreen();
-  }
-  fsTrigger.style.display='none'
-  fsExitTrigger.style.display='block'
-}
-
-function smolScreen() {
-  if (document.exitFullscreen) {
-    document.exitFullscreen();
-  } else if (document.webkitExitFullscreen) {
-    document.webkitExitFullscreen();
-  } else if (document.mozCancelFullScreen) {
-    document.mozCancelFullScreen();
-  } else if (document.msExitFullscreen) {
-    document.msExitFullscreen();
-  }
-  fsExitTrigger.style.display='none'
-  fsTrigger.style.display='block'
-}
-
-function lock(orientation) {
-  fullScreen();
-  screen.orientation.lock(orientation);
 }
