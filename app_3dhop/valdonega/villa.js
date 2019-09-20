@@ -50,91 +50,78 @@ function infoSwitch(type) {
 }
 
 function setInfo(hotspot){
-	var txt;
+  var txt;
 
-	$('#hs1_img').css("display", "none");
-	$('#hs2_img').css("display", "none");
-	$('#hs3_img').css("display", "none");
-	$('#hs4_img').css("display", "none");
-	$('#hs5_img').css("display", "none");
-	$('#hs6_img').css("display", "none");
-	$('#hs7_img').css("display", "none");
-	$('#hs8_img').css("display", "none");
-	$('#hs9_img').css("display", "none");
-	$('#hs10_img').css("display", "none");
-	$('#hs11_img').css("display", "none");
-	$('#hs12_img').css("display", "none");
-	$('#hs13_img').css("display", "none");
+  $('#hs1_img').css("display", "none");
+  $('#hs2_img').css("display", "none");
+  $('#hs3_img').css("display", "none");
+  $('#hs4_img').css("display", "none");
+  $('#hs5_img').css("display", "none");
+  $('#hs6_img').css("display", "none");
+  $('#hs7_img').css("display", "none");
+  $('#hs8_img').css("display", "none");
+  $('#hs9_img').css("display", "none");
+  $('#hs10_img').css("display", "none");
+  $('#hs11_img').css("display", "none");
+  $('#hs12_img').css("display", "none");
+  $('#hs13_img').css("display", "none");
 
-	switch (hotspot){
-		case "spot1":
-			$('.hs_sub').text("Maschera teatrale femminile");
-			$('#hs1_img').css("display", "table");
-//			$('.hs_text').html("....sts confirmed that&hellip;<br/><br/><center><a href='http://en.wikipedia.org/wiki/Tutankhamun' target='_blank'><i>...continue reading...</i></a></center>");
-			break;
-		case "spot2":
-			$('.hs_sub').text("Gallo");
-			$('#hs2_img').css("display", "table");
-//			$('.hs_text').html("The tomb of the young pharaoh Tutankhamon was discovered in 1922 by Howard Carter in the Valley of the Kings.<br/><br/>The tomb was densely packed with items in great disarray. Carter was able to photograph garlands of flowers, which disintegrated when touched. Due to the state of the tomb, and to Carter's meticulous recording technique, the tomb&hellip;<br/><br/><center><a href='http://en.wikipedia.org/wiki/KV62' target='_blank'><i>...continue reading...</i></a></center>");
-			break;
-		case "spot3":
-			$('.hs_sub').text("Testa maschile forse di divinita' (Giove?)");
-			$('#hs3_img').css("display", "table");
-//			$('.hs_text').html("The tomb of the young pharaoh Tutankhamon was discovered in 1922 by Howard Carter in the Valley of the Kings.<br/><br/>The tomb was densely packed with items in great disarray. Carter was able to photograph garlands of flowers, which disintegrated when touched. Due to the state of the tomb, and to Carter's meticulous recording technique, the tomb&hellip;<br/><br/><center><a href='http://en.wikipedia.org/wiki/KV62' target='_blank'><i>...continue reading...</i></a></center>");
-			break;
-		case "spot4":
-			$('.hs_sub').text("Merlo ?");
-			$('#hs4_img').css("display", "table");
-//			$('.hs_text').html("The tomb of the young pharaoh Tutankhamon was discovered in 1922 by Howard Carter in the Valley of the Kings.<br/><br/>The tomb was densely packed with items in great disarray. Carter was able to photograph garlands of flowers, which disintegrated when touched. Due to the state of the tomb, and to Carter's meticulous recording technique, the tomb&hellip;<br/><br/><center><a href='http://en.wikipedia.org/wiki/KV62' target='_blank'><i>...continue reading...</i></a></center>");
-			break;
-		case "spot5":
-			$('.hs_sub').text("Trampoliere, forse struzzo");
-			$('#hs5_img').css("display", "table");
-//			$('.hs_text').html("....sts confirmed that&hellip;<br/><br/><center><a href='http://en.wikipedia.org/wiki/Tutankhamun' target='_blank'><i>...continue reading...</i></a></center>");
-			break;
-		case "spot6":
-			$('.hs_sub').text("Cinciallegra ?");
-			$('#hs6_img').css("display", "table");
-//			$('.hs_text').html("The tomb of the young pharaoh Tutankhamon was discovered in 1922 by Howard Carter in the Valley of the Kings.<br/><br/>The tomb was densely packed with items in great disarray. Carter was able to photograph garlands of flowers, which disintegrated when touched. Due to the state of the tomb, and to Carter's meticulous recording technique, the tomb&hellip;<br/><br/><center><a href='http://en.wikipedia.org/wiki/KV62' target='_blank'><i>...continue reading...</i></a></center>");
-			break;
-		case "spot7":
-			$('.hs_sub').text("Anatra");
-			$('#hs7_img').css("display", "table");
-//			$('.hs_text').html("The tomb of the young pharaoh Tutankhamon was discovered in 1922 by Howard Carter in the Valley of the Kings.<br/><br/>The tomb was densely packed with items in great disarray. Carter was able to photograph garlands of flowers, which disintegrated when touched. Due to the state of the tomb, and to Carter's meticulous recording technique, the tomb&hellip;<br/><br/><center><a href='http://en.wikipedia.org/wiki/KV62' target='_blank'><i>...continue reading...</i></a></center>");
-			break;
-		case "spot8":
-			$('.hs_sub').text("Passeriforme");
-			$('#hs8_img').css("display", "table");
-//			$('.hs_text').html("The tomb of the young pharaoh Tutankhamon was discovered in 1922 by Howard Carter in the Valley of the Kings.<br/><br/>The tomb was densely packed with items in great disarray. Carter was able to photograph garlands of flowers, which disintegrated when touched. Due to the state of the tomb, and to Carter's meticulous recording technique, the tomb&hellip;<br/><br/><center><a href='http://en.wikipedia.org/wiki/KV62' target='_blank'><i>...continue reading...</i></a></center>");
-			break;
-		case "spot9":
-			$('.hs_sub').text("?");
-			$('#hs9_img').css("display", "table");
-//			$('.hs_text').html("....sts confirmed that&hellip;<br/><br/><center><a href='http://en.wikipedia.org/wiki/Tutankhamun' target='_blank'><i>...continue reading...</i></a></center>");
-			break;
-		case "spot10":
-			$('.hs_sub').text("Figura stante, forse Minerva/Atena");
-			$('#hs10_img').css("display", "table");
-//			$('.hs_text').html("The tomb of the young pharaoh Tutankhamon was discovered in 1922 by Howard Carter in the Valley of the Kings.<br/><br/>The tomb was densely packed with items in great disarray. Carter was able to photograph garlands of flowers, which disintegrated when touched. Due to the state of the tomb, and to Carter's meticulous recording technique, the tomb&hellip;<br/><br/><center><a href='http://en.wikipedia.org/wiki/KV62' target='_blank'><i>...continue reading...</i></a></center>");
-			break;
-		case "spot11":
-			$('.hs_sub').text("Civetta");
-			$('#hs11_img').css("display", "table");
-//			$('.hs_text').html("The tomb of the young pharaoh Tutankhamon was discovered in 1922 by Howard Carter in the Valley of the Kings.<br/><br/>The tomb was densely packed with items in great disarray. Carter was able to photograph garlands of flowers, which disintegrated when touched. Due to the state of the tomb, and to Carter's meticulous recording technique, the tomb&hellip;<br/><br/><center><a href='http://en.wikipedia.org/wiki/KV62' target='_blank'><i>...continue reading...</i></a></center>");
-			break;
-		case "spot12":
-			$('.hs_sub').text("Grifoni");
-			$('#hs12_img').css("display", "table");
-//			$('.hs_text').html("The tomb of the young pharaoh Tutankhamon was discovered in 1922 by Howard Carter in the Valley of the Kings.<br/><br/>The tomb was densely packed with items in great disarray. Carter was able to photograph garlands of flowers, which disintegrated when touched. Due to the state of the tomb, and to Carter's meticulous recording technique, the tomb&hellip;<br/><br/><center><a href='http://en.wikipedia.org/wiki/KV62' target='_blank'><i>...continue reading...</i></a></center>");
-			break;
-		case "spot13":
-			$('.hs_sub').text("Ippocampi");
-			$('#hs13_img').css("display", "table");
-//			$('.hs_text').html("The tomb of the young pharaoh Tutankhamon was discovered in 1922 by Howard Carter in the Valley of the Kings.<br/><br/>The tomb was densely packed with items in great disarray. Carter was able to photograph garlands of flowers, which disintegrated when touched. Due to the state of the tomb, and to Carter's meticulous recording technique, the tomb&hellip;<br/><br/><center><a href='http://en.wikipedia.org/wiki/KV62' target='_blank'><i>...continue reading...</i></a></center>");
-			break;
-		default:
-			$('.hs_sub').text("Hotspot Subtitle");
-			$('.hs_text').html("Hotspot Text");
-			break;
-	}
+  switch (hotspot){
+    case "spot1":
+      $('.hs_sub').text("Maschera teatrale femminile / Female theatre mask");
+      $('#hs1_img').css("display", "table");
+    break;
+    case "spot2":
+      $('.hs_sub').text("Gallo / Rooster");
+      $('#hs2_img').css("display", "table");
+    break;
+    case "spot3":
+      $('.hs_sub').text("Testa maschile, forse di divinita' (Giove?) / Male head (Jupiter?)");
+      $('#hs3_img').css("display", "table");
+    break;
+    case "spot4":
+      $('.hs_sub').text("Merlo o tordo / Blackbird or throstle");
+      $('#hs4_img').css("display", "table");
+    break;
+    case "spot5":
+      $('.hs_sub').text("Struzzo ? / Ostrich ?");
+      $('#hs5_img').css("display", "table");
+    break;
+    case "spot6":
+      $('.hs_sub').text("Cinciallegra ? / Titmouse ?");
+      $('#hs6_img').css("display", "table");
+    break;
+    case "spot7":
+      $('.hs_sub').text("Anatra / Duck");
+      $('#hs7_img').css("display", "table");
+    break;
+    case "spot8":
+      $('.hs_sub').text("?");
+      $('#hs8_img').css("display", "table");
+    break;
+    case "spot9":
+      $('.hs_sub').text("Gazza ghiandaia ? / Jay ?");
+      $('#hs9_img').css("display", "table");
+    break;
+    case "spot10":
+      $('.hs_sub').text("Figura stante, forse Minerva / Standing figure (Minerva?)");
+      $('#hs10_img').css("display", "table");
+    break;
+    case "spot11":
+      $('.hs_sub').text("Civetta / Owl");
+      $('#hs11_img').css("display", "table");
+    break;
+    case "spot12":
+      $('.hs_sub').text("Grifoni / Griffins");
+      $('#hs12_img').css("display", "table");
+    break;
+    case "spot13":
+      $('.hs_sub').text("Ippocampi / Hippocamps");
+      $('#hs13_img').css("display", "table");
+    break;
+    default:
+      $('.hs_sub').text("Hotspot Subtitle");
+      $('.hs_text').html("Hotspot Text");
+    break;
+  }
 }
