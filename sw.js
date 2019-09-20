@@ -1,4 +1,4 @@
-const cacheName = 'valdonega.190919.v3.3';
+const cacheName = 'valdonega.190919.v3.4';
 const cacheFile = [
   './',
   './webfonts/fa-solid-900.ttf',

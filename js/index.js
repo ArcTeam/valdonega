@@ -54,23 +54,23 @@ function setBgImg(angle){
   }else {
     bg.src='./assets/img/pianta_villa_hor.jpg';
 
-    circleTop.setAttribute("cx","770")
-    circleTop.setAttribute("cy","360")
-    pulseTop.setAttribute("cx","770")
-    pulseTop.setAttribute("cy","360")
-    pulseTop.style.transformOrigin="770px 360px"
+    circleTop.setAttribute("cx","725")
+    circleTop.setAttribute("cy","340")
+    pulseTop.setAttribute("cx","725")
+    pulseTop.setAttribute("cy","340")
+    pulseTop.style.transformOrigin="725px 340px"
 
     circleMiddle.setAttribute("cx","265")
-    circleMiddle.setAttribute("cy","250")
+    circleMiddle.setAttribute("cy","230")
     pulseMiddle.setAttribute("cx","265")
-    pulseMiddle.setAttribute("cy","250")
-    pulseMiddle.style.transformOrigin="265px 250px"
+    pulseMiddle.setAttribute("cy","230")
+    pulseMiddle.style.transformOrigin="265px 230px"
 
-    circleBottom.setAttribute("cx","180")
-    circleBottom.setAttribute("cy","330")
-    pulseBottom.setAttribute("cx","180")
-    pulseBottom.setAttribute("cy","330")
-    pulseBottom.style.transformOrigin="180px 330px"
+    circleBottom.setAttribute("cx","160")
+    circleBottom.setAttribute("cy","310")
+    pulseBottom.setAttribute("cx","160")
+    pulseBottom.setAttribute("cy","310")
+    pulseBottom.style.transformOrigin="160px 310px"
   }
 }
 
